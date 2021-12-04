@@ -1,0 +1,6 @@
+github.com/kytart/godrm v0.0.0-20210309160922-6b139ef54591 h1:FeNG18vTIhxL15MKaAZytDbspAPlVteebfedo5gabT0=
+github.com/kytart/godrm v0.0.0-20210309160922-6b139ef54591/go.mod h1:Y+YdK8W4Pp8iogoLluZ0OenjBSNb9+8NqoNNEdYzxec=
+launchpad.net/gocheck v0.0.0-20140225173054-000000000087 h1:Izowp2XBH6Ya6rv+hqbceQyw/gSGoXfH/UPoTGduL54=
+launchpad.net/gocheck v0.0.0-20140225173054-000000000087/go.mod h1:hj7XX3B/0A+80Vse0e+BUHsHMTEhd0O4cpUHr/e/BUM=
+launchpad.net/gommap v0.0.0-20121012075617-000000000015 h1:ROjpWoAwfoub5UmgCuZwFvM/kWU+UFfuBXbJ6lz/awU=
+launchpad.net/gommap v0.0.0-20121012075617-000000000015/go.mod h1:+rB9VlRTGlxdpc/nkCoOe0Qxgn/pyVwo9lGtVndZbOo=
