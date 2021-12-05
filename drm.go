@@ -26,8 +26,8 @@ type Display struct {
 	savedCrtc *mode.Crtc
 }
 
-func NewImage() (*Image, error) {
-	file, err := drm.OpenCard(0)
+func NewImage(card int) (*Image, error) {
+	file, err := drm.OpenCard(card)
 	if err != nil {
 		return nil, fmt.Errorf("open drm card: %w", err)
 	}
