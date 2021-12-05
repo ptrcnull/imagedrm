@@ -31,7 +31,6 @@ func NewImage(card int) (*Image, error) {
 	if err != nil {
 		return nil, fmt.Errorf("open drm card: %w", err)
 	}
-	defer file.Close()
 
 	if !drm.HasDumbBuffer(file) {
 		return nil, fmt.Errorf("drm device does not support dumb buffers")
@@ -61,11 +60,13 @@ func NewImage(card int) (*Image, error) {
 }
 
 func (i *Image) Close() error {
-	var err error
 	for _, display := range i.displays {
-		err = i.destroyFramebuffer(display)
+		err := i.destroyFramebuffer(display)
+		if err != nil {
+			fmt.Println(err)
+		}
 	}
-	return err
+	return i.file.Close()
 }
 
 func (i *Image) createFramebuffer(dev *mode.Modeset) (*Framebuffer, error) {
